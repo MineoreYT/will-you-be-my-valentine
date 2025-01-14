@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/281550812_1430337400814310_1043810079522120635_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF6t2xpGm-jGHVyAGukV1PAsuw8D_Z1cuGy7DwP9nVy4YNs-ZiwGQJNdoZkpnm8czeU-08kdNAow_r_Ij9TE4rS&_nc_ohc=ksQebVpmyDcQ7kNvgEMKDli&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=AhvRE-B15dCsUilWOOsBxfy&oh=00_AYCT4B67LFMUU_K5L_62JOI8cx7goyHsejkxq1fXOdJWDQ&oe=678C49BC">
+    <title>crush mo ba ako?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button#yes {
+            background-color: green;
+            color: white;
+        }
+
+        button#no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+
+        button#no:hover {
+            position: absolute;
+            left: calc(50% + (Math.random() * 200 - 100)px);
+            top: calc(50% + (Math.random() * 200 - 100)px);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>WILL YOU BE MY VALENTINE</h1>
+    <a href="yiee.html"><button id = "yes">yes</button></a>
+    <button id = "no">no</button>
+    <script>
+        const noButton = document.getElementById('no');
+        noButton.addEventListener('mouseover', () => {
+            const randomX = Math.random() * window.innerWidth - noButton.offsetWidth;
+            const randomY = Math.random() * window.innerHeight - noButton.offsetHeight;
+            noButton.style.left = `${Math.max(0, Math.min(randomX, window.innerWidth - noButton.offsetWidth))}px`;
+            noButton.style.top = `${Math.max(0, Math.min(randomY, window.innerHeight - noButton.offsetHeight))}px`;
+        });
+    </script>
+</body>
+</html>
